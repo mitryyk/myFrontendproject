@@ -1,13 +1,13 @@
-.gridParent{
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 20px;
-grid-row-gap: 20px;
-height: 100vh;
-/* justify-content: center; */
-align-content: center;
-align-items: center;
-max-width: 800px;
+.gridParent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 260px);
+   grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  height: 100vh;
+  /* justify-content: center; */
+  align-content: center;
+  align-items: center;
+  max-width: 800px;
   margin: 0 auto;
 }
