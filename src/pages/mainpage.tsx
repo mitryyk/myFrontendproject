@@ -1,4 +1,4 @@
-import { PageContainer } from '../sharedpagecomponents/pagecontainer';
+import { PageContainer } from '../sharedpagecomponents/pagecontainers/mainpage_container';
 import { CardLink } from 'sharedpagecomponents/mainpagecardlink';
 import { cardlinks } from '../data/allpagescontent';
 

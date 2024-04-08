@@ -1,5 +1,5 @@
 import { Header } from 'sharedpagecomponents/header';
-import { PageContainer } from '../sharedpagecomponents/pagecontainer';
+import { PageContainer } from '../sharedpagecomponents/pagecontainers/mainpage_container';
 
 import { DataTable } from '../sharedpagecomponents/maintables';
 
