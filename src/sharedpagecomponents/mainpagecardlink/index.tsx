@@ -1,5 +1,5 @@
 import '../../w3.css';
-import s from './mainpagecardlink.module.css';
+import s from './MainPageCardlink.module.css';
 
 export const CardLink = ({ text, pic }: { text: string; pic: string }) => {
   return (

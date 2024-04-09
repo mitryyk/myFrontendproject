@@ -1,26 +1,26 @@
 import '../../w3.css';
-import { headercontent } from '../../data/allpagescontent';
-import type { NavbarItems, NavbarDropdowns } from '../../data/allpagescontent';
+import { headercontent } from '../../data/AllPagesContent';
+import type { NavbarItems, NavbarDropdowns } from '../../data/AllPagesContent';
 import { ReactNode } from 'react';
 
+const NavbarItem = ({ itemlabel }: { itemlabel: string }) => {
+  return (
+    <a href="#" className="w3-bar-item w3-button w3-mobile">
+      {itemlabel}
+    </a>
+  );
+};
+
+const DropDown = ({ dropname, children }: { dropname: string; children: ReactNode }) => {
+  return (
+    <div className="w3-dropdown-hover w3-mobile">
+      <button className="w3-button">{dropname}</button>
+      <div className="w3-dropdown-content w3-bar-block w3-card-4">{children}</div>
+    </div>
+  );
+};
+
 export const Header = () => {
-  const NavbarItem = ({ itemlabel }: { itemlabel: string }) => {
-    return (
-      <a href="#" className="w3-bar-item w3-button w3-mobile">
-        {itemlabel}
-      </a>
-    );
-  };
-
-  const DropDown = ({ dropname, children }: { dropname: string; children: ReactNode }) => {
-    return (
-      <div className="w3-dropdown-hover w3-mobile">
-        <button className="w3-button">{dropname}</button>
-        <div className="w3-dropdown-content w3-bar-block w3-card-4">{children}</div>
-      </div>
-    );
-  };
-
   const headerArray: any = [];
   const headercomponentsArr: any = [];
 
@@ -36,7 +36,6 @@ export const Header = () => {
     }
     return 0;
   });
-  console.log(headerArray);
 
   headerArray.map((el: NavbarItems & NavbarDropdowns) => {
     if (!el.isdropdownel) {
