@@ -1,6 +1,4 @@
-import { Header } from 'sharedpagecomponents/header';
-
-import { DataTable } from '../sharedpagecomponents/maintables';
+import { PageWrapper } from '../sharedpagecomponents/pagecontainers/pagewrapper';
 
 export const Journal_cl = () => {
   return (

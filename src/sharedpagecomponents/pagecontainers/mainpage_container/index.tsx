@@ -20,7 +20,6 @@ export const MainPageContainer = ({ children }: { children: ReactNode }) => {
   const sm = useMediaQuery('(max-width: 720px)');
 
   if (sm) {
-    console.log('sm');
     return <div className={s.gridOnecol}>{children}</div>;
   } else {
     return <div className={s.grid}>{children}</div>;

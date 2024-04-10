@@ -1,1 +1,1 @@
-import { Header } from 'sharedpagecomponents/header';
+import { PageWrapper } from '../sharedpagecomponents/pagecontainers/pagewrapper';
