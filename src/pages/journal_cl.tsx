@@ -8,5 +8,84 @@ export const Journal_Cl = () => {
       .then(data => console.log('This is your data', data));
   }, []);
 
-  return <div>Journal_Cl</div>;
+  return (
+    <div>
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+      Journal_Cl
+      <br />
+    </div>
+  );
 };
