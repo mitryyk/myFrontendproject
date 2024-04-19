@@ -6,7 +6,7 @@ export const Mainpage = () => {
   return (
     <MainPageContainer>
       {cardlinks.map(el => {
-        return <CardLink key={el.id} pic={el.img} text={el.text} />;
+        return <CardLink link={el.link} key={el.id} pic={el.img} text={el.text} />;
       })}
     </MainPageContainer>
   );

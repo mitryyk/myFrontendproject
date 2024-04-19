@@ -4,29 +4,31 @@ import statspic from './pictures/03_stats.jpg';
 import libpic from './pictures/04_lib.jpg';
 
 export const cardlinks = [
-    {id: 0, img: constrpic, text: "Журнал стройлаб"},
-    {id: 1, img: valvepic, text: "Журнал испытаний"},
-    {id: 2, img: statspic, text: "Отчеты"},
-    {id: 3, img: libpic, text: "Справочник"}
+    {id: 0, img: constrpic, text: "Журнал стройлаб", link: "pages/journal_cl"},
+    {id: 1, img: valvepic, text: "Журнал испытаний", link: "pages/journal_ht"},
+    {id: 2, img: statspic, text: "Отчеты", link: "pages/reportpage"},
+    {id: 3, img: libpic, text: "Справочник", link: "pages/wikipage"}
 ]
 
-export const headercontent: Headercontent = {
-    navbarItems: [
-        {posNumber: 0, isdropdownel: false, navbarItem: "Главная"},
-        {posNumber: 2, isdropdownel: false, navbarItem: "Отчеты"},
-        {posNumber: 3, isdropdownel: false, navbarItem: "Справочник"}
-    ],
-    navbarDropdowns: [
-        {posNumber: 1, isdropdownel: true, dropdownName: "Журналы", dropdownItems: [{pos: 0, text: "Журнал стройлаб"}, {pos: 1, text: "Журнал испытаний"}]}
-    ]
+export type HeaderItem = {
+    posNumber: number;
+    isdropdown: boolean;
+    title: string;
+    link: string;
+    subitem: subItem[];
 }
 
-export type NavbarItems = {posNumber: number, isdropdownel: boolean, navbarItem: string}
-
-export type NavbarDropdowns = {posNumber: number, isdropdownel: boolean, dropdownName: string, dropdownItems: {pos: number, text: string}[]}
-
-export type Headercontent = {
-    [key: string]: NavbarItems[] | NavbarDropdowns[]
+type subItem = {
+    posNumber: number;
+    title: string;
+    link: string;
 }
+
+export const headerContent = [
+    {posNumber: 0, isdropdown: false, title: "Главная", link: "/", subitem:[]},
+    {posNumber: 1, isdropdown: true, title: "Журналы", link:'', subitem: [{posNumber: 0, title: "Журнал стройлаб", link: "journal_cl"}, {posNumber: 1, title: "Журнал испытаний", link: "journal_ht"}]},
+    {posNumber: 2, isdropdown: false, title: "Отчеты", link: "reportpage", subitem:[]},
+    {posNumber: 3, isdropdown: false, title: "Справочник", link: "wikipage", subitem:[]}
+]
 
 

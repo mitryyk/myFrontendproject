@@ -1,1 +1,3 @@
-import { PageWrapper } from '../sharedpagecomponents/pagecontainers/pagewrapper';
+export const WikiPage = () => {
+  return <div>WikiPage</div>;
+};

@@ -29,6 +29,9 @@ module.exports = env => {
 
     output: {
       path: path.resolve(__dirname, 'build'),
+      //////////
+      publicPath: '/',
+      //////////
       filename: '[name].[contenthash].js',
       assetModuleFilename: 'assets/[hash][ext][query]',
       clean: true,
@@ -116,6 +119,31 @@ module.exports = env => {
             },
           ],
         },
+///////////////////////////////
+        {
+          test: /\.module\.s[ac]ss$/i,
+          use: [ 
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: isDev ? '[name]____[local]--[hash:base64:8]' : '[hash:base64:8]',
+                },
+              },
+            },
+            {loader: 'sass-loader'},
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [autoprefixer],
+                },
+              },
+            },
+          ],
+        },      
+//////////////////////////////
         {
           test: /\.(png|jpe?g|gif|webp|ico)$/i,
           type: 'asset/resource',

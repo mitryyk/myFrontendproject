@@ -37,9 +37,11 @@
     "postcss-loader": "^7.3.3",
     "prettier": "^3.1.1",
     "react-refresh": "^0.14.0",
+    "sass": "^1.75.0",
+    "sass-loader": "^14.2.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },

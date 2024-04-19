@@ -1,0 +1,97 @@
+$breakpoint: 721px;
+$nav-height: 2rem;
+$nav-background: #607d8b;
+$nav-font-color: #ffffff;
+$link-hover-color: #4a616c;
+
+
+.active {
+    background-color: $link-hover-color;
+}
+
+nav {
+    display: block;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    background-color: $nav-background;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            position: relative;
+            text-decoration: none;
+            a {
+                &:hover {
+                    background: $link-hover-color;
+                    color: $nav-font-color;
+                }
+                &:not(:only-child):after {
+                    padding-left: 0px;
+                    content: ' ▾';
+                }
+                display: block;
+                padding: 5px 20px;
+                line-height: $nav-height;
+                background: $nav-background;
+                color: $nav-font-color;
+                text-decoration: none;
+            }
+            ul li a {
+                text-decoration: none;
+                min-width: 190px;
+            }
+        }
+    }
+}
+
+.dropContent {
+    display: none;
+    white-space: nowrap;
+    background-color: $nav-background;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropContentOpen {
+    display: block;
+    white-space: nowrap;
+    background-color: $nav-background;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navMobile {
+    @media (min-width: 721px){display: none;}
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+    background: $nav-background;
+    height: 40px;
+    width: 40px;
+    align-content: center;
+    padding-top: 5px;
+}
+
+.navList {
+    @media (max-width: 720px) {
+        display: block;
+        li {
+            width: 100%;
+            ul {
+                position: static;
+                li a {
+                    padding-left: 40px;
+                    width: 100%;
+                }
+            } 
+        } 
+    }
+}
