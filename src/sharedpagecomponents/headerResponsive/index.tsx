@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import BurgerMenu from '../../data/icons/burgerMenu.svg';
 import { headerContent } from '../../data/AllPagesContent';
@@ -22,6 +22,23 @@ export const HeaderResponsive = () => {
       setmenuMobileOpen(false);
     }
   };
+
+  const navEl = useRef<HTMLDivElement>(null!);
+
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      console.log(!navEl.current.contains(e.target));
+      if (!navEl.current.contains(e.target)) {
+        setMenuOpen(false);
+        setmenuMobileOpen(false);
+      }
+    };
+
+    window.addEventListener('click', handleClick);
+    return () => {
+      window.removeEventListener('click', handleClick);
+    };
+  }, []);
 
   //end of states
   const headercomponentsArr: any = [];
@@ -60,11 +77,13 @@ export const HeaderResponsive = () => {
   });
 
   return (
-    <nav>
-      <div className={s.navMobile} onClick={openMenuMobile}>
-        <BurgerMenu color="white" style={{ width: 'inherit', height: 'inherit' }} />
-      </div>
-      <ul className={menuMobileOpen ? s.navList : s.navlistClose}>{headercomponentsArr}</ul>
-    </nav>
+    <div ref={navEl}>
+      <nav>
+        <div className={s.navMobile} onClick={openMenuMobile}>
+          <BurgerMenu color="white" style={{ width: 'inherit', height: 'inherit' }} />
+        </div>
+        <ul className={menuMobileOpen ? s.navList : s.navlistClose}>{headercomponentsArr}</ul>
+      </nav>
+    </div>
   );
 };
