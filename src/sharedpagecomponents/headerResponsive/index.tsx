@@ -27,7 +27,6 @@ export const HeaderResponsive = () => {
 
   useEffect(() => {
     const handleClick = (e: any) => {
-      console.log(!navEl.current.contains(e.target));
       if (!navEl.current.contains(e.target)) {
         setMenuOpen(false);
         setmenuMobileOpen(false);
@@ -77,7 +76,7 @@ export const HeaderResponsive = () => {
   });
 
   return (
-    <div ref={navEl}>
+    <div className={s.refDiv} ref={navEl}>
       <nav>
         <div className={s.navMobile} onClick={openMenuMobile}>
           <BurgerMenu color="white" style={{ width: 'inherit', height: 'inherit' }} />

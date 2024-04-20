@@ -1,3 +1,14 @@
+.hiddenDiv {
+  
+    display: block;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    height: 40px;
+    background-color: #f1f1f1;
+    
+
+}
 .medGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(330px, 1fr));
@@ -16,7 +27,7 @@
   }
   margin: 0 auto;
   @media (min-width: 721px) {
-    height: 100vh;
+    height: calc(100vh - 40px);
   }
    
   align-content: center;
