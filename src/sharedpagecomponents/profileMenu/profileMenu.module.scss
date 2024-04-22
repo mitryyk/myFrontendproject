@@ -6,28 +6,20 @@ $link-hover-color: #4a616c;
     display: block;
     position: fixed;
     top: 40px;
-    right: 40px;
+    right: 20px;
     width: auto;
     z-index: 1;
+    background-color: $background-color;
     ul {
-        display: block;
         list-style: none;
         margin: 0;
         padding: 0;
-        li {
-            float: left;
-            text-decoration: none;
-            a {
-                &:hover {
-                    background: $link-hover-color;
-                    color: $font-color;
-                }
-                display: block;
-                padding: 5px 20px;
-                line-height: 40px;
-                background: $background-color;
-                color: $font-color;
-                text-decoration: none;
+        li {padding: 5px 20px;
+            line-height: 40px;
+            color: $font-color;
+            cursor: pointer;
+            &:hover {
+                background: $link-hover-color;
             }
         }
     }

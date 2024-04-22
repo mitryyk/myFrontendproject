@@ -14,12 +14,10 @@ export const ProfileMenu = ({ user, role }: ProfileProps) => {
           {user} - {role}
         </li>
         <li>
-          <CiCircleInfo color="#ffffff" />
-          Инфо
+          <CiCircleInfo color="#ffffff" /> Инфо
         </li>
         <li>
-          <CiEdit color="#ffffff" />
-          Создать профиль
+          <CiEdit color="#ffffff" /> Создать профиль
         </li>
         <li>
           <CiLogout color="#ffffff" /> Выйти
