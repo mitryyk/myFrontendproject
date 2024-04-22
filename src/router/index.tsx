@@ -10,31 +10,31 @@ import { ROUTES } from './routes';
 
 export const router = createBrowserRouter([
   {
-    path: ROUTES.ROOT,
+    path: '/', // ROUTES.ROOT
     element: <UserLoginPage />,
   },
   {
-    path: ROUTES.MAIN,
+    path: '/main', // ROUTES.MAIN,
     element: <Mainpage />,
   },
   {
-    path: ROUTES.PAGES,
+    path: '/pages', // ROUTES.PAGES,
     element: <RootComponent />,
     children: [
       {
-        path: ROUTES.JOURNAL_CL,
+        path: 'journal_cl', // ROUTES.JOURNAL_CL,
         element: <Journal_Cl />,
       },
       {
-        path: ROUTES.JOURNAL_HT,
+        path: 'journal_ht', // ROUTES.JOURNAL_HT,
         element: <Journal_Ht />,
       },
       {
-        path: ROUTES.REPORTPAGE,
+        path: 'reportpage', // ROUTES.REPORTPAGE,
         element: <ReportPage />,
       },
       {
-        path: ROUTES.WIKIPAGE,
+        path: 'wikipage', // ROUTES.WIKIPAGE,
         element: <WikiPage />,
       },
     ],
