@@ -4,31 +4,37 @@ import { Journal_Cl } from '../pages/Journal_Cl';
 import { Journal_Ht } from '../pages/Journal_Ht';
 import { ReportPage } from '../pages/ReportPage';
 import { WikiPage } from '../pages/WikiPage';
+import { UserLoginPage } from 'pages/UserLoginPage';
 import { RootComponent } from 'core/root';
+import { ROUTES } from './routes';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: ROUTES.ROOT,
+    element: <UserLoginPage />,
+  },
+  {
+    path: ROUTES.MAIN,
     element: <Mainpage />,
   },
   {
-    path: 'pages',
+    path: ROUTES.PAGES,
     element: <RootComponent />,
     children: [
       {
-        path: 'journal_cl',
+        path: ROUTES.JOURNAL_CL,
         element: <Journal_Cl />,
       },
       {
-        path: 'journal_ht',
+        path: ROUTES.JOURNAL_HT,
         element: <Journal_Ht />,
       },
       {
-        path: 'reportpage',
+        path: ROUTES.REPORTPAGE,
         element: <ReportPage />,
       },
       {
-        path: 'wikipage',
+        path: ROUTES.WIKIPAGE,
         element: <WikiPage />,
       },
     ],

@@ -1,14 +1,13 @@
 .hiddenDiv {
-  
-    display: block;
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    height: 40px;
-    background-color: #f1f1f1;
-    
-
+  display: block;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  height: 40px;
+  background-color: #f1f1f1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
+
 .medGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(330px, 1fr));

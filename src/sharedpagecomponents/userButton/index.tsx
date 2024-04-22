@@ -1,5 +1,11 @@
 import s from './userButton.module.scss';
+import { CiUser } from 'react-icons/ci';
 
 export const UserButton = () => {
-  return <button className={s.button}>Выйти</button>;
+  return (
+    <button className={s.button}>
+      <CiUser color="#ffffff" />
+      Профиль
+    </button>
+  );
 };

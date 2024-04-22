@@ -25,8 +25,8 @@ type subItem = {
 }
 
 export const headerContent = [
-    {posNumber: 0, isdropdown: false, title: "Главная", link: "/", subitem:[]},
-    {posNumber: 1, isdropdown: true, title: "Журналы", link:'', subitem: [{posNumber: 0, title: "Журнал стройлаб", link: "journal_cl"}, {posNumber: 1, title: "Журнал испытаний", link: "journal_ht"}]},
+    {posNumber: 0, isdropdown: false, title: "Главная", link: "", subitem:[]},
+    {posNumber: 1, isdropdown: true, title: "Журналы", link:"", subitem: [{posNumber: 0, title: "Журнал стройлаб", link: "journal_cl"}, {posNumber: 1, title: "Журнал испытаний", link: "journal_ht"}]},
     {posNumber: 2, isdropdown: false, title: "Отчеты", link: "reportpage", subitem:[]},
     {posNumber: 3, isdropdown: false, title: "Справочник", link: "wikipage", subitem:[]}
 ]
