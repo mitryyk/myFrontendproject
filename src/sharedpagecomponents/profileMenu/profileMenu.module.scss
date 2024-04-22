@@ -17,13 +17,21 @@ $link-hover-color: #4a616c;
         li {padding: 5px 20px;
             line-height: 40px;
             color: $font-color;
-            cursor: pointer;
+            cursor: default;
+            &:not(:first-child) {cursor: pointer;}
             &:hover {
-                background: $link-hover-color;
+                &:not(:first-child){
+                    background: $link-hover-color;
+                }
             }
         }
     }
 }
 
-
+.icon {
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+}
 

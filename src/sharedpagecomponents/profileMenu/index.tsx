@@ -1,4 +1,5 @@
 import { CiEdit, CiLogout, CiCircleInfo } from 'react-icons/ci';
+import { useState } from 'react';
 import s from './profileMenu.module.scss';
 
 type ProfileProps = {
@@ -7,6 +8,8 @@ type ProfileProps = {
 };
 
 export const ProfileMenu = ({ user, role }: ProfileProps) => {
+  const [ProfileMenuOpen, setProfileMenuOpen] = useState(false);
+
   return (
     <div className={s.profileMenuBlock}>
       <ul>
@@ -14,13 +17,13 @@ export const ProfileMenu = ({ user, role }: ProfileProps) => {
           {user} - {role}
         </li>
         <li>
-          <CiCircleInfo color="#ffffff" /> Инфо
+          <CiCircleInfo color="#ffffff" className={s.icon} /> Инфо
         </li>
         <li>
-          <CiEdit color="#ffffff" /> Создать профиль
+          <CiEdit color="#ffffff" className={s.icon} /> Создать профиль
         </li>
         <li>
-          <CiLogout color="#ffffff" /> Выйти
+          <CiLogout color="#ffffff" className={s.icon} /> Выйти
         </li>
       </ul>
     </div>
