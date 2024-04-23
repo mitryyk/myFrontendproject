@@ -4,10 +4,10 @@ import statspic from './pictures/03_stats.jpg';
 import libpic from './pictures/04_lib.jpg';
 
 export const cardlinks = [
-    {id: 0, img: constrpic, text: "Журнал стройлаб", link: "pages/journal_cl"},
-    {id: 1, img: valvepic, text: "Журнал испытаний", link: "pages/journal_ht"},
-    {id: 2, img: statspic, text: "Отчеты", link: "pages/reportpage"},
-    {id: 3, img: libpic, text: "Справочник", link: "pages/wikipage"}
+    {id: 0, img: constrpic, text: "Журнал стройлаб", link: "/pages/journal_cl"},
+    {id: 1, img: valvepic, text: "Журнал испытаний", link: "/pages/journal_ht"},
+    {id: 2, img: statspic, text: "Отчеты", link: "/pages/reportpage"},
+    {id: 3, img: libpic, text: "Справочник", link: "/pages/wikipage"}
 ]
 
 export type HeaderItem = {
@@ -25,10 +25,10 @@ type subItem = {
 }
 
 export const headerContent = [
-    {posNumber: 0, isdropdown: false, title: "Главная", link: "main", subitem:[]},
+    {posNumber: 0, isdropdown: false, title: "Главная", link: "/main", subitem:[]},
     {posNumber: 1, isdropdown: true, title: "Журналы", link:"", subitem: [{posNumber: 0, title: "Журнал стройлаб", link: "journal_cl"}, {posNumber: 1, title: "Журнал испытаний", link: "journal_ht"}]},
-    {posNumber: 2, isdropdown: false, title: "Отчеты", link: "reportpage", subitem:[]},
-    {posNumber: 3, isdropdown: false, title: "Справочник", link: "wikipage", subitem:[]}
+    {posNumber: 2, isdropdown: false, title: "Отчеты", link: "/reportpage", subitem:[]},
+    {posNumber: 3, isdropdown: false, title: "Справочник", link: "/wikipage", subitem:[]}
 ]
 
 
