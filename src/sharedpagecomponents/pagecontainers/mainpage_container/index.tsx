@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import s from './ManePageContainer.module.scss';
+import s from './MainPageContainer.module.scss';
 import { UserButton } from 'sharedpagecomponents/userButton';
 import '../../../w3.css';
 
