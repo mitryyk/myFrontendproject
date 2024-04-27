@@ -18,23 +18,23 @@ export const router = createBrowserRouter([
     element: <Mainpage />,
   },
   {
-    path: '/pages', // ROUTES.PAGES,
+    path: ROUTES.PAGES,
     element: <RootComponent />,
     children: [
       {
-        path: 'journal_cl', // ROUTES.JOURNAL_CL,
+        path: ROUTES.JOURNAL_CL,
         element: <Journal_Cl />,
       },
       {
-        path: 'journal_ht', // ROUTES.JOURNAL_HT,
+        path: ROUTES.JOURNAL_HT,
         element: <Journal_Ht />,
       },
       {
-        path: 'reportpage', // ROUTES.REPORTPAGE,
+        path: ROUTES.REPORTPAGE,
         element: <ReportPage />,
       },
       {
-        path: 'wikipage', // ROUTES.WIKIPAGE,
+        path: ROUTES.WIKIPAGE, // ,
         element: <WikiPage />,
       },
     ],

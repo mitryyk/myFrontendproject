@@ -8,9 +8,9 @@ import { ProfileMenu } from 'sharedpagecomponents/profileMenu';
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <UserButton />
-      <HeaderResponsive />
       <ProfileMenu user="Дмитрий Кучаев" role="Администратор" />
+      {/* <UserButton /> */}
+      <HeaderResponsive />
       <div className={s.container}>{children}</div>
     </>
   );
