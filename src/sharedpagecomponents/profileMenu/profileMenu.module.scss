@@ -1,7 +1,34 @@
-$background-color: #607d8b;
+$background-color: #616161;
 $font-color: #ffffff;
-$link-hover-color: #4a616c;
+$link-hover-color: #414141;
 
+$button-backgrond-color: #616161;
+
+// стили для кнопки
+.button {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 20px;
+    background-color: $button-backgrond-color;
+    border: none;
+    color: white;
+    align-content: center;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 15px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon {
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+}
+
+//стили для блока меню
 .profileMenuBlock {
     display: block;
     position: fixed;
@@ -10,6 +37,7 @@ $link-hover-color: #4a616c;
     width: auto;
     z-index: 1;
     background-color: $background-color;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
     ul {
         list-style: none;
         margin: 0;
@@ -28,10 +56,13 @@ $link-hover-color: #4a616c;
     }
 }
 
+.profileMenuNone {
+    display: none;
+}
+
 .icon {
     vertical-align: middle;
     width: 18px;
     height: 18px;
     margin-bottom: 3px;
 }
-

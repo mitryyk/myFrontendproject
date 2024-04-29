@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-
 import s from './userLoginForm.module.scss';
 import { ROUTES } from 'router/routes';
+import { LoaderCircle } from 'sharedpagecomponents/loader';
 
 export const UserLoginForm = () => {
   const navigate = useNavigate();

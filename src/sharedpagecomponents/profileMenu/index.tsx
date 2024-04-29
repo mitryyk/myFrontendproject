@@ -1,7 +1,6 @@
-import { CiEdit, CiLogout, CiCircleInfo } from 'react-icons/ci';
-import { useState } from 'react';
+import { CiEdit, CiLogout, CiCircleInfo, CiUser } from 'react-icons/ci';
+import { useState, useEffect, useRef } from 'react';
 import s from './profileMenu.module.scss';
-import { UserButton } from 'sharedpagecomponents/userButton';
 
 type ProfileProps = {
   user: string;
@@ -10,11 +9,31 @@ type ProfileProps = {
 
 export const ProfileMenu = ({ user, role }: ProfileProps) => {
   const [ProfileMenuOpen, setProfileMenuOpen] = useState(false);
+  const openMenu = () => {
+    setProfileMenuOpen(!ProfileMenuOpen);
+  };
+
+  const refEl = useRef<HTMLButtonElement>(null!);
+
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      if (!refEl.current.contains(e.target)) {
+        setProfileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('click', handleClick);
+    return () => {
+      window.removeEventListener('click', handleClick);
+    };
+  }, []);
 
   return (
     <>
-      <UserButton />
-      <div className={s.profileMenuBlock}>
+      <button className={s.button} onClick={openMenu} ref={refEl}>
+        <CiUser color="#ffffff" className={s.icon} /> Профиль
+      </button>
+      <div className={ProfileMenuOpen ? s.profileMenuBlock : s.profileMenuNone}>
         <ul>
           <li>
             {user} - {role}

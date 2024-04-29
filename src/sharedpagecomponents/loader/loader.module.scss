@@ -1,0 +1,35 @@
+@use "sass:math";
+$background-color: #607d8b;
+$height: 200px;
+
+.loader {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    height: $height;
+
+    div {
+        @mixin loaderSize($height) {
+            @if $height > 60px {
+                width: 60px;
+                height: 60px;
+                border: 10px solid #ffffff;
+                border-top: 10px solid $background-color;
+            } @else {
+                width: $height;
+                height: $height;
+                border: calc($height / 6) solid #ffffff;
+                border-top: calc($height / 6) solid $background-color;
+            }
+        }
+        @include loaderSize($height);
+        border-radius: 50%;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+}
